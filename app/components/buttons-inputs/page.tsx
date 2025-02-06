@@ -197,7 +197,11 @@ export default function Page() {
       description: "Interactive checkbox component",
       preview: (
         <div className="flex items-center space-x-2">
-          <Checkbox id="terms" checked={checked} onCheckedChange={setChecked} />
+          <Checkbox
+        id="terms"
+        checked={checked}
+        onCheckedChange={(value) => setChecked(value === "indeterminate" ? false : value)}
+      />
           <label
             htmlFor="terms"
             className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"

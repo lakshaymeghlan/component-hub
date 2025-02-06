@@ -84,7 +84,7 @@ export function MainNav() {
   const pathname = usePathname();
   const router = useRouter();
   const [open, setOpen] = React.useState(false);
-  const [theme, setTheme] = React.useState<'light' | 'dark'>('light');
+  const [theme, setTheme] = React.useState<"light" | "dark">("light");
 
   React.useEffect(() => {
     const down = (e: KeyboardEvent) => {
@@ -98,9 +98,9 @@ export function MainNav() {
   }, []);
 
   const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
+    const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
-    document.documentElement.classList.toggle('dark');
+    document.documentElement.classList.toggle("dark");
   };
 
   return (
@@ -108,9 +108,7 @@ export function MainNav() {
       <div className="flex items-center">
         <Link href="/" className="mr-6 flex items-center space-x-2">
           <Code2 className="h-6 w-6" />
-          <span className="hidden font-bold sm:inline-block">
-            ComponentHub
-          </span>
+          <span className="hidden font-bold sm:inline-block">ComponentHub</span>
         </Link>
         <NavigationMenu>
           <NavigationMenuList>
@@ -195,13 +193,22 @@ export function MainNav() {
           </CommandList>
         </CommandDialog>
         <Button variant="ghost" size="icon" onClick={toggleTheme}>
-          {theme === 'light' ? (
+          {theme === "light" ? (
             <Moon className="h-4 w-4" />
           ) : (
             <Sun className="h-4 w-4" />
           )}
         </Button>
-        <Button variant="outline" className="ml-4">
+        <Button
+          variant="outline"
+          className="ml-4"
+          onClick={() =>
+            window.open(
+              "https://github.com/lakshaymeghlan/component-hub",
+              "_blank"
+            )
+          }
+        >
           <Github className="mr-2 h-4 w-4" />
           GitHub
         </Button>

@@ -25,7 +25,8 @@ export default function DocsPage() {
             <h1 className="text-4xl font-bold">Documentation</h1>
           </div>
           <p className="text-xl text-muted-foreground">
-            Comprehensive guides and documentation for building beautiful interfaces.
+            Comprehensive guides and documentation for building beautiful
+            interfaces.
           </p>
         </div>
 
@@ -35,10 +36,12 @@ export default function DocsPage() {
             <h2 className="text-2xl font-semibold mb-4">Getting Started</h2>
             <div className="prose dark:prose-invert">
               <p className="text-muted-foreground mb-4">
-                Our component library is built on top of Tailwind CSS and provides a set of accessible,
-                reusable, and composable components that make it easy to create beautiful web applications.
+                Our component library is built on top of Tailwind CSS and
+                provides a set of accessible, reusable, and composable
+                components that make it easy to create beautiful web
+                applications.
               </p>
-              
+
               <div className="grid gap-4">
                 <div className="flex items-start gap-4">
                   <Code2 className="h-6 w-6 mt-1" />
@@ -95,18 +98,31 @@ export default function Page() {
               <TableBody>
                 <TableRow>
                   <TableCell className="font-medium">Button</TableCell>
-                  <TableCell><Badge>Stable</Badge></TableCell>
-                  <TableCell>Displays a button or a component that looks like a button.</TableCell>
+                  <TableCell>
+                    <Badge>Stable</Badge>
+                  </TableCell>
+                  <TableCell>
+                    Displays a button or a component that looks like a button.
+                  </TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell className="font-medium">Dialog</TableCell>
-                  <TableCell><Badge>Stable</Badge></TableCell>
-                  <TableCell>A modal dialog that interrupts the user with important content.</TableCell>
+                  <TableCell>
+                    <Badge>Stable</Badge>
+                  </TableCell>
+                  <TableCell>
+                    A modal dialog that interrupts the user with important
+                    content.
+                  </TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell className="font-medium">Navigation Menu</TableCell>
-                  <TableCell><Badge>Stable</Badge></TableCell>
-                  <TableCell>A collection of navigation links for your website.</TableCell>
+                  <TableCell>
+                    <Badge>Stable</Badge>
+                  </TableCell>
+                  <TableCell>
+                    A collection of navigation links for your website.
+                  </TableCell>
                 </TableRow>
               </TableBody>
             </Table>
@@ -117,7 +133,8 @@ export default function Page() {
             <h2 className="text-2xl font-semibold mb-4">Contributing</h2>
             <div className="prose dark:prose-invert">
               <p className="text-muted-foreground mb-4">
-                We're open to contributions! If you'd like to contribute, please follow these steps:
+                We're open to contributions! If you'd like to contribute, please
+                follow these steps:
               </p>
               <ol className="list-decimal list-inside space-y-2 text-muted-foreground">
                 <li>Fork the repository</li>
@@ -126,7 +143,14 @@ export default function Page() {
                 <li>Submit a pull request</li>
               </ol>
               <div className="mt-4">
-                <Button>
+                <Button
+                  onClick={() =>
+                    window.open(
+                      "https://github.com/lakshaymeghlan/component-hub",
+                      "_blank"
+                    )
+                  }
+                >
                   <Github className="mr-2 h-4 w-4" />
                   View on GitHub
                 </Button>

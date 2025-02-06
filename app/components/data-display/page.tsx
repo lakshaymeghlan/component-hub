@@ -364,9 +364,9 @@ export default function Page() {
 
         <div className="space-y-12">
           {components.map((component) => (
-            <Card key={component.id} className="p-6">
-              <h2 className="text-2xl font-semibold mb-2">{component.title}</h2>
-              <p className="text-muted-foreground mb-6">{component.description}</p>
+            <Card key={component?.id} className="p-6">
+              <h2 className="text-2xl font-semibold mb-2">{component?.title}</h2>
+              <p className="text-muted-foreground mb-6">{component?.description}</p>
               
               <Tabs defaultValue="preview" className="w-full">
                 <TabsList className="mb-4">
@@ -376,7 +376,7 @@ export default function Page() {
                 </TabsList>
                 
                 <TabsContent value="preview" className="p-6 border rounded-lg">
-                  {component.preview}
+                  {component?.preview}
                 </TabsContent>
                 
                 <TabsContent value="react">
@@ -385,9 +385,9 @@ export default function Page() {
                       variant="ghost"
                       size="icon"
                       className="absolute right-4 top-4"
-                      onClick={() => copyToClipboard(component.code.react, `${component.id}-react`)}
+                      onClick={() => copyToClipboard(component?.code?.next || '', `${component?.id}-next`)}
                     >
-                      {copied[`${component.id}-react`] ? (
+                      {copied[`${component?.id}-react`] ? (
                         <Check className="h-4 w-4" />
                       ) : (
                         <Copy className="h-4 w-4" />
@@ -395,7 +395,7 @@ export default function Page() {
                     </Button>
                     <ScrollArea className="h-[300px] w-full rounded-md border p-4">
                       <pre className="text-sm">
-                        <code>{component.code.react}</code>
+                        <code>{component?.code.react}</code>
                       </pre>
                     </ScrollArea>
                   </div>
@@ -407,9 +407,9 @@ export default function Page() {
                       variant="ghost"
                       size="icon"
                       className="absolute right-4 top-4"
-                      onClick={() => copyToClipboard(component.code.next, `${component.id}-next`)}
+                      onClick={() => copyToClipboard(component?.code?.next || '', `${component?.id}-next`)}
                     >
-                      {copied[`${component.id}-next`] ? (
+                      {copied[`${component?.id}-next`] ? (
                         <Check className="h-4 w-4" />
                       ) : (
                         <Copy className="h-4 w-4" />
@@ -417,7 +417,7 @@ export default function Page() {
                     </Button>
                     <ScrollArea className="h-[300px] w-full rounded-md border p-4">
                       <pre className="text-sm">
-                        <code>{component.code.next}</code>
+                        <code>{component?.code.next}</code>
                       </pre>
                     </ScrollArea>
                   </div>

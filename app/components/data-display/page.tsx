@@ -313,7 +313,7 @@ export default function Page() {
   )
 }`
       },
-    },,
+    },
     {
       id: "skeleton",
       title: "Skeleton",

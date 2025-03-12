@@ -133,8 +133,8 @@ export default function Page() {
             <h2 className="text-2xl font-semibold mb-4">Contributing</h2>
             <div className="prose dark:prose-invert">
               <p className="text-muted-foreground mb-4">
-                We're open to contributions! If you'd like to contribute, please
-                follow these steps:
+              We&apos;re open to contributions! If you&apos;d like to contribute, please
+              follow these steps:
               </p>
               <ol className="list-decimal list-inside space-y-2 text-muted-foreground">
                 <li>Fork the repository</li>

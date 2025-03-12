@@ -17,7 +17,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Progress } from "@/components/ui/progress";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useToast } from "@/hooks/use-toast";
-import { Copy, Check, AlertCircle, Bell, User } from "lucide-react";
+import { Copy, Check, AlertCircle} from "lucide-react";
 
 export default function DataDisplayPage() {
   const [copied, setCopied] = useState<{[key: string]: boolean}>({});

@@ -480,7 +480,7 @@ export default function Page() {
             <div className="space-y-4">
               <h4 className="text-sm font-medium">Password Settings</h4>
               <p className="text-sm text-muted-foreground">
-                Change your password here. After saving, you'll be logged out.
+              Change your password here. After saving, you&apos;ll be logged out.
               </p>
             </div>
           </TabsContent>
